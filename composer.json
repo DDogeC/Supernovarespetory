@@ -1,0 +1,15 @@
+{
+  "require": {
+    "ext-json": "*",
+    "ext-mysqli": "*",
+    "ext-curl": "*",
+    "ext-iconv": "*"
+  },
+  "require-dev": {
+    "ext-json": "*",
+    "ext-mysqli": "*",
+    "ext-curl": "*",
+    "ext-iconv": "*",
+    "phpunit/phpunit": "5.*"
+  }
+}

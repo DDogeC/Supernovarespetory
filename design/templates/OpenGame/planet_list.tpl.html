@@ -1,0 +1,30 @@
+<!-- IF $OVERVIEW -->
+  <!-- DEFINE $CELL_CLASS = 'tr' -->
+<!-- ELSE -->
+  <!-- DEFINE $CELL_CLASS = '' -->
+<!-- ENDIF -->
+
+<!-- IF $OVERVIEW && .planet > 5 -->
+  <!-- DEFINE $COLUMN_COUNT = 2 -->
+<!-- ENDIF -->
+
+<!-- BEGIN planet -->
+  <!-- DEFINE $PLANET_PLANET_ID = '{planet.ID}' -->
+
+  <!-- IF $OVERVIEW && (! LIST_COLUMN_COUNT || planet.S_ROW_COUNT % LIST_COLUMN_COUNT == 0)  -->
+  <tr>
+  <!-- ENDIF -->
+  <td valign="top" class="{$CELL_CLASS} pointer" align="center">
+  <!-- IF planet.ID -->
+
+    <!-- INCLUDE planet_list_info -->
+
+    <!-- IF $OVERVIEW -->
+    <br /><br />
+    <!-- ENDIF -->
+  <!-- ENDIF -->
+  </td>
+  <!-- IF $OVERVIEW && (! LIST_COLUMN_COUNT || (planet.S_ROW_COUNT + 1) % LIST_COLUMN_COUNT == 0 || planet.S_LAST_ROW)  -->
+    </tr>
+  <!-- ENDIF -->
+<!-- END planet -->

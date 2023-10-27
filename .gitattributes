@@ -1,0 +1,13 @@
+.gitattributes export-ignore
+.gitignore export-ignore
+
+*.jpg binary
+*.gif binary
+*.png binary
+*.ttf binary
+*.zip binary
+*.rar binary
+*.gz binary
+
+*.min.js diff=nodiff
+*.min.css diff=nodiff

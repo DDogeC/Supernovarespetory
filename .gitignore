@@ -1,0 +1,61 @@
+# Ignore config.php in any directory
+config.php
+*config.php
+
+# Ignore Yandex and Google placeholders
+/yandex_*.txt
+/google*.txt
+
+# Ignore skin xNova
+/skins/xnova/
+
+# Ignore forums
+/phpBB3/
+/forum/
+
+# Ignore DirInfo
+dirinfo
+
+# Ignore xcache interface
+/xcache/
+/xcache-admin/
+
+# Ignore local folder, test folder and test files
+/test/
+/.local/
+t.*
+
+# Ignore CMD-files
+/*.cmd
+
+# Ignore update flag
+/includes/update.last
+
+# Ignore cache folder
+/cache/
+
+# Ignore cache folder
+/images/avatar/
+
+# Ignore backup folder
+/admin/sxd/cfg.php
+/admin/sxd/error.log
+/admin/sxd/ses.php
+
+# Ignore all dotfiles...
+.*
+# ...except for .gitignore & .gitattributes
+!.gitignore
+!.gitattributes
+!.htaccess
+
+# Ignoring all files started with "__" - it's a local or global test files
+__*
+
+# Ignore backups
+/admin/backup/*.gz
+/admin/backup/*.bz2
+/admin/backup/*.sql
+/admin/sxd/backup/*.gz
+/admin/sxd/backup/*.bz2
+/admin/sxd/backup/*.sql

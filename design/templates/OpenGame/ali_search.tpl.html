@@ -1,0 +1,55 @@
+<br />
+<table width="519">
+  <tr>
+    <th>{L_ali_search_title}</th>
+    <th><form action="alliance.php?mode=search" method="POST">
+      <input type="text" name="searchtext" value="{SEARCH_TEXT}" size=50>&nbsp;&nbsp;<input type="submit" value="{L_ali_search_action}">
+    </form></th>
+  </tr>
+  <tr>
+    <th colspan="2" class="c_c">
+      {L_ali_search_tip}<br/>
+      <a href="stat.php?type=0&who=2&range=1" class="link warning">{L_ali_search_show_all}</a>
+    </th>
+  </tr>
+  <tr><td colspan="2" class="c"></td></tr>
+</table>
+
+<!-- IF SEARCH_TEXT || .alliances -->
+<br />
+<table width=519>
+  <tr class="c_c">
+    <th>{L_ali_sys_tag}</th>
+    <th>{L_ali_sys_name}</th>
+    <th>{L_ali_sys_members}</th>
+    <th>{ Разница }</th>
+    <th>{ Рейт }</th>
+    <th>{L_ali_req_make}</th>
+  </tr>
+
+  <!-- BEGIN alliances -->
+    <tr class="c_c">
+      <!-- IF alliances.ID == -1 -->
+      <td colspan="6" class="subheader info">{L_ally_alliances_recommended}</td>
+      <!-- ELSE -->
+      <td><a href="alliance.php?mode=ainfo&a={alliances.ID}" class="link">{alliances.TAG}</a></td>
+      <td><a href="alliance.php?mode=ainfo&a={alliances.ID}" class="link">{alliances.NAME}</a></td>
+      <td class="c_r">{alliances.MEMBERS}</td>
+      <td class="c_r">{alliances.DIFF|num|format}</td>
+      <td class="c_r">{alliances.RATE}</td>
+      <td>
+        <!-- IF alliances.NO_REQUESTS -->
+          <font color="red">{L_ali_req_not_allowed}</font>
+        <!-- ELSE -->
+          <a href="alliance.php?mode=apply&a={alliances.ID}" class="link">{L_ali_req_make}</a>
+        <!-- ENDIF -->
+      </td>
+      <!-- ENDIF -->
+    </tr>
+  <!-- BEGINELSE alliances -->
+    <tr><th colspan="6">{L_ali_search_result_none}</th></tr>
+  <!-- END alliances -->
+</table>
+<!-- ENDIF -->
+
+<!-- INCLUDE page_hint -->
